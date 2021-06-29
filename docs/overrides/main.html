@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'overrides/assets/stylesheets/main.css' | url }}">
+{% endblock %}
+
+{% block announce %}
+  <a href="https://github.com/tansrv/tanserver">
+    View the code on
+    <span class="twemoji github">
+      {% include ".icons/fontawesome/brands/github.svg" %}
+    </span>
+    <strong>GitHub</strong>
+  </a>
+{% endblock %}

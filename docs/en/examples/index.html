@@ -1,0 +1,1353 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://tanserver.org/en/examples/">
+      
+      <link rel="icon" href="../../assets/images/tanserver.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Examples - Tanserver</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Poppins";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  <link rel="stylesheet" href="../../overrides/assets/stylesheets/main.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-hello_tanserver" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-announce">
+          <div class="md-announce__inner md-grid md-typeset">
+            
+  <a href="https://github.com/tansrv/tanserver">
+    View the code on
+    <span class="twemoji github">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </span>
+    <strong>GitHub</strong>
+  </a>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tanserver" class="md-header__button md-logo" aria-label="Tanserver" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tanserver
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/tansrv/tanserver/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tansrv/tanserver
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../install/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Examples
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../apis/" class="md-tabs__link">
+      APIs
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../java/" class="md-tabs__link">
+        Connectors
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../install_shipper/" class="md-tabs__link">
+        Log shipping
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../cfg/" class="md-tabs__link">
+      Configuration
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../update/" class="md-tabs__link">
+      Update
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tanserver" class="md-nav__button md-logo" aria-label="Tanserver" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tanserver
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/tansrv/tanserver/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tansrv/tanserver
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Quick start
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quick start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_ssl/" class="md-nav__link">
+        Install SSL certificate
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        Connect to PostgreSQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start/" class="md-nav__link">
+        Start server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editor/" class="md-nav__link">
+        Set up an editor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first_api/" class="md-nav__link">
+        Write your first API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        API examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hot_reload/" class="md-nav__link">
+        Hot reload
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Examples
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-hello_tanserver" class="md-nav__link">
+    API: hello_tanserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-append_status" class="md-nav__link">
+    API: append_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-login_register" class="md-nav__link">
+    API: login_register
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-get_items" class="md-nav__link">
+    API: get_items
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-transaction" class="md-nav__link">
+    API: transaction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/" class="md-nav__link">
+        APIs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Connectors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Connectors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swift/" class="md-nav__link">
+        Swift
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Log shipping
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Log shipping" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Log shipping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_shipper/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start_shipping/" class="md-nav__link">
+        Start shipping
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cfg/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-hello_tanserver" class="md-nav__link">
+    API: hello_tanserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-append_status" class="md-nav__link">
+    API: append_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-login_register" class="md-nav__link">
+    API: login_register
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-get_items" class="md-nav__link">
+    API: get_items
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-transaction" class="md-nav__link">
+    API: transaction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/tansrv/tanserver/edit/master/docs/en/examples.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Examples</h1>
+                
+                <h2 id="api-hello_tanserver">API: <code>hello_tanserver</code><a class="headerlink" href="#api-hello_tanserver" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Get <code>username</code> from JSON string sent by the client.</p>
+</li>
+<li>
+<p>If <code>username</code> is <code>tanserver</code> then<br />
+   send <code>{"hello": "tanserver"}</code> to the client.</p>
+</li>
+<li>
+<p>Otherwise send <code>{"error": "unknown username"}</code>.</p>
+</li>
+</ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
+<span class="nf">hello_tanserver</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/* Get username  */</span>
+    <span class="n">string</span>  <span class="n">user</span> <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;username&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+        <span class="k">return</span> <span class="s">&quot;missing username&quot;</span><span class="p">;</span>
+
+    <span class="n">Json</span><span class="o">::</span><span class="n">Value</span>  <span class="n">value</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="s">&quot;tanserver&quot;</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">value</span><span class="p">[</span><span class="s">&quot;hello&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;tanserver&quot;</span><span class="p">;</span>
+
+        <span class="cm">/* Send {&quot;hello&quot;: &quot;tanserver&quot;}  */</span>
+        <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">value</span><span class="p">[</span><span class="s">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;unknown username&quot;</span><span class="p">;</span>
+
+    <span class="cm">/* Send {&quot;error&quot;: &quot;unknown username&quot;}  */</span>
+    <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="hello_tanserver" src="../../common/gif/hello_tanserver.gif" /></p>
+<hr />
+<h2 id="api-append_status">API: <code>append_status</code><a class="headerlink" href="#api-append_status" title="Permanent link">&para;</a></h2>
+<p>Append status code and message to JSON string.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
+<span class="nf">append_status</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">id</span><span class="se">\&quot;</span><span class="s">: 0}&quot;</span><span class="p">;</span>
+
+    <span class="cm">/* json_string = {&quot;status&quot;: 200, &quot;message&quot;: &quot;ok&quot;, &quot;result&quot;: {&quot;id&quot;: 0}}  */</span>
+    <span class="n">json_append_status</span><span class="p">(</span><span class="n">json_string</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">);</span>
+
+    <span class="cm">/* </span>
+<span class="cm">     * json_string = {&quot;status&quot;: -1, &quot;message&quot;: &quot;failed&quot;, &quot;result&quot;: {&quot;id&quot;: 0}}</span>
+<span class="cm">     * json_append_status(json_string, -1, &quot;failed&quot;);</span>
+<span class="cm">     */</span>
+
+    <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="append_status" src="../../common/gif/append_status.gif" /></p>
+<hr />
+<h2 id="api-login_register">API: <code>login_register</code><a class="headerlink" href="#api-login_register" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Get <code>id</code> and <code>password</code> from JSON string sent by the client.</p>
+</li>
+<li>
+<p>Check if the user exists.</p>
+</li>
+<li>
+<p>If the user exists, convert the row to a JSON string<br />
+   and send it to the client.</p>
+</li>
+<li>
+<p>Otherwise, complete the registration and send <code>{"msg": "Registration successful"}</code>.</p>
+</li>
+</ol>
+<p><code>users</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>password</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>mypwd</td>
+<td>21</td>
+</tr>
+<tr>
+<td>1</td>
+<td>mypwd2</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
+<span class="nf">login_register</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="cm">/*</span>
+<span class="cm">         * Get id and password, even if the id is a number,</span>
+<span class="cm">         * it should be converted to a string</span>
+<span class="cm">         */</span>
+        <span class="n">string</span>  <span class="n">id</span>  <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
+        <span class="n">string</span>  <span class="n">pwd</span> <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;password&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">pwd</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="s">&quot;missing id or password&quot;</span><span class="p">;</span>
+
+        <span class="cm">/*</span>
+<span class="cm">         * Query database and get JSON string</span>
+<span class="cm">         *</span>
+<span class="cm">         * &quot;8.8.8.8&quot;: Database server IP address (/etc/tanserver.conf)</span>
+<span class="cm">         * row_to_json(): pgSQL JSON function</span>
+<span class="cm">         */</span>
+        <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+                                       <span class="s">&quot;select row_to_json(users) from users where id = $1 and password = $2;&quot;</span><span class="p">,</span>
+                                       <span class="n">id</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">pwd</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+
+        <span class="cm">/* If json_string is an empty string, it means there is no such user  */</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">json_string</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+
+            <span class="cm">/* Complete registration  */</span>
+            <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;insert into users values($1, $2, $3)&quot;</span><span class="p">,</span>
+                     <span class="n">id</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">pwd</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="s">&quot;16&quot;</span><span class="p">);</span>
+
+            <span class="n">Json</span><span class="o">::</span><span class="n">Value</span>  <span class="n">json</span><span class="p">;</span>
+
+            <span class="n">json</span><span class="p">[</span><span class="s">&quot;msg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;registration successful&quot;</span><span class="p">;</span>
+
+            <span class="cm">/* Send {&quot;msg&quot;: &quot;registration successful&quot;}  */</span>
+            <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Send JSON string, like: {&quot;id&quot;: 0, &quot;password&quot;: &quot;mypwd&quot;, &quot;age&quot;: 21}  */</span>
+        <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
+
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
+        <span class="cm">/*</span>
+<span class="cm">         * Database query failed, the reason will be</span>
+<span class="cm">         * automatically written to the log file</span>
+<span class="cm">         *</span>
+<span class="cm">         * You can choose to throw an exception (disconnect from the client)</span>
+<span class="cm">         * or send an error JSON string</span>
+<span class="cm">         *</span>
+<span class="cm">         * Here we choose to disconnect (it will cause an IOException to be</span>
+<span class="cm">         * thrown when the Java client calls getJSON())</span>
+<span class="cm">         */</span>
+        <span class="k">throw</span> <span class="s">&quot;error&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="login_register" src="../../common/gif/login_register.gif" /></p>
+<hr />
+<h2 id="api-get_items">API: <code>get_items</code><a class="headerlink" href="#api-get_items" title="Permanent link">&para;</a></h2>
+<p>Convert items table data into JSON string and send it to the client.</p>
+<p><code>items</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>book</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>keyboard</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
+<span class="nf">get_items</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+                                       <span class="s">&quot;select array_to_json(array_agg(row_to_json(items))) from items;&quot;</span><span class="p">,</span>
+                                       <span class="nb">NULL</span><span class="p">);</span>
+
+        <span class="n">json_append_status</span><span class="p">(</span><span class="n">json_string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;OK&quot;</span><span class="p">);</span>
+
+        <span class="cm">/* Send</span>
+<span class="cm">         * {</span>
+<span class="cm">         *      &quot;status&quot;:0,</span>
+<span class="cm">         *      &quot;message&quot;:&quot;OK&quot;,</span>
+<span class="cm">         *      &quot;result&quot;:[</span>
+<span class="cm">         *          {</span>
+<span class="cm">         *              &quot;id&quot;:0,</span>
+<span class="cm">         *              &quot;name&quot;:&quot;book&quot;,</span>
+<span class="cm">         *              &quot;price&quot;:5</span>
+<span class="cm">         *          },</span>
+<span class="cm">         *          {</span>
+<span class="cm">         *              &quot;id&quot;:1,</span>
+<span class="cm">         *              &quot;name&quot;:&quot;keyboard&quot;,</span>
+<span class="cm">         *              &quot;price&quot;:200</span>
+<span class="cm">         *          }</span>
+<span class="cm">         *      ]</span>
+<span class="cm">         * }</span>
+<span class="cm">         */</span>
+        <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
+
+        <span class="cm">/*</span>
+<span class="cm">         * Exclude price</span>
+<span class="cm">         *</span>
+<span class="cm">         * string  json_string = pg_query(&quot;8.8.8.8&quot;,</span>
+<span class="cm">         *                                &quot;select array_to_json(array_agg(json_build_object(&#39;id&#39;, id, &#39;name&#39;, name))) from items;&quot;,</span>
+<span class="cm">         *                                NULL);</span>
+<span class="cm">         *</span>
+<span class="cm">         * json_append_status(json_string, 200, &quot;ok&quot;);</span>
+<span class="cm">         *</span>
+<span class="cm">         * Send</span>
+<span class="cm">         * {</span>
+<span class="cm">         *      &quot;status&quot;:200,</span>
+<span class="cm">         *      &quot;message&quot;:&quot;ok&quot;,</span>
+<span class="cm">         *      &quot;result&quot;:[</span>
+<span class="cm">         *          {</span>
+<span class="cm">         *              &quot;id&quot;:0,</span>
+<span class="cm">         *              &quot;name&quot;:&quot;book&quot;</span>
+<span class="cm">         *          },</span>
+<span class="cm">         *          {</span>
+<span class="cm">         *              &quot;id&quot;:1,</span>
+<span class="cm">         *              &quot;name&quot;:&quot;keyboard&quot;</span>
+<span class="cm">         *          }</span>
+<span class="cm">         *      ]</span>
+<span class="cm">         * }</span>
+<span class="cm">         * return json_string;</span>
+<span class="cm">         */</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="s">&quot;error&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p><img alt="get_items" src="../../common/gif/get_items.gif" /></p>
+<hr />
+<h2 id="api-transaction">API: <code>transaction</code><a class="headerlink" href="#api-transaction" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
+<span class="nf">transaction</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;begin;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+
+        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;update accounts set num = num - $1 where name = $2;&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">);</span>
+
+        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
+                 <span class="s">&quot;update accounts set num = num + $1 &quot;</span>
+                 <span class="s">&quot;where name = $2;&quot;</span><span class="p">,</span> <span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;Mike&quot;</span><span class="p">);</span>
+
+        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;commit;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+
+        <span class="cm">/* Send &quot;ok&quot;  */</span>
+        <span class="k">return</span> <span class="s">&quot;ok&quot;</span><span class="p">;</span>
+
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
+
+        <span class="cm">/* Rollback and send &quot;failed&quot;  */</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;rollback;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+        <span class="k">return</span> <span class="s">&quot;failed&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../commands/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Commands" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Commands
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../apis/" class="md-footer__link md-footer__link--next" aria-label="Next: APIs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              APIs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; tanserver.org
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>
