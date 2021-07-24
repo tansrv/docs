@@ -250,8 +250,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../apis/" class="md-tabs__link">
-      APIs
+    <a href="../python_apis/" class="md-tabs__link">
+      Python APIs
     </a>
   </li>
 
@@ -266,7 +266,7 @@
   
     <li class="md-tabs__item">
       <a href="../java/" class="md-tabs__link">
-        Connectors
+        Client connectors
       </a>
     </li>
   
@@ -484,18 +484,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../hot_reload/" class="md-nav__link">
-        Hot reload
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         Commands
       </a>
@@ -596,8 +584,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/" class="md-nav__link">
-        APIs
+      <a href="../python_apis/" class="md-nav__link">
+        Python APIs
       </a>
     </li>
   
@@ -617,13 +605,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -646,6 +634,18 @@
     <li class="md-nav__item">
       <a href="../swift/" class="md-nav__link">
         Swift
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        JavaScript
       </a>
     </li>
   
@@ -844,73 +844,35 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
-<span class="nf">hello_tanserver</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="cm">/* Get username  */</span>
-    <span class="n">string</span>  <span class="n">user</span> <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;username&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-        <span class="k">return</span> <span class="s">&quot;missing username&quot;</span><span class="p">;</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">hello_tanserver</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="c1"># Get username</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">json_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;missing username&#39;</span>
 
-    <span class="n">Json</span><span class="o">::</span><span class="n">Value</span>  <span class="n">value</span><span class="p">;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">user</span> <span class="o">==</span> <span class="s">&quot;tanserver&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s1">&#39;tanserver&#39;</span><span class="p">:</span> <span class="c1"># {&quot;hello&quot;:&quot;tanserver&quot;}</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tanserver&#39;</span>
+    <span class="k">else</span><span class="p">:</span>                   <span class="c1"># {&quot;error&quot;:&quot;unknown username&quot;}</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;unknown username&#39;</span>
 
-        <span class="n">value</span><span class="p">[</span><span class="s">&quot;hello&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;tanserver&quot;</span><span class="p">;</span>
-
-        <span class="cm">/* Send {&quot;hello&quot;: &quot;tanserver&quot;}  */</span>
-        <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="n">value</span><span class="p">[</span><span class="s">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;unknown username&quot;</span><span class="p">;</span>
-
-    <span class="cm">/* Send {&quot;error&quot;: &quot;unknown username&quot;}  */</span>
-    <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <p><img alt="hello_tanserver" src="../../common/gif/hello_tanserver.gif" /></p>
 <hr />
 <h2 id="api-append_status">API: <code>append_status</code><a class="headerlink" href="#api-append_status" title="Permanent link">&para;</a></h2>
 <p>Append status code and message to JSON string.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
-<span class="nf">append_status</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">id</span><span class="se">\&quot;</span><span class="s">: 0}&quot;</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">append_status</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;{</span><span class="se">\&quot;</span><span class="s1">id</span><span class="se">\&quot;</span><span class="s1">:0}&#39;</span>
 
-    <span class="cm">/* json_string = {&quot;status&quot;: 200, &quot;message&quot;: &quot;ok&quot;, &quot;result&quot;: {&quot;id&quot;: 0}}  */</span>
-    <span class="n">json_append_status</span><span class="p">(</span><span class="n">json_string</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s">&quot;ok&quot;</span><span class="p">);</span>
-
-    <span class="cm">/* </span>
-<span class="cm">     * json_string = {&quot;status&quot;: -1, &quot;message&quot;: &quot;failed&quot;, &quot;result&quot;: {&quot;id&quot;: 0}}</span>
-<span class="cm">     * json_append_status(json_string, -1, &quot;failed&quot;);</span>
-<span class="cm">     */</span>
-
-    <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
-<span class="p">}</span>
+    <span class="c1"># Send {&quot;status&quot;: 200, &quot;message&quot;: &quot;ok&quot;, &quot;result&quot;: {&quot;id&quot;: 0}}</span>
+    <span class="k">return</span> <span class="n">json_append_status</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <p><img alt="append_status" src="../../common/gif/append_status.gif" /></p>
@@ -986,84 +948,40 @@
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
-<span class="nf">login_register</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-        <span class="cm">/*</span>
-<span class="cm">         * Get id and password, even if the id is a number,</span>
-<span class="cm">         * it should be converted to a string</span>
-<span class="cm">         */</span>
-        <span class="n">string</span>  <span class="n">id</span>  <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
-        <span class="n">string</span>  <span class="n">pwd</span> <span class="o">=</span> <span class="n">value_recvd</span><span class="p">[</span><span class="s">&quot;password&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">();</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">login_register</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="c1"># Get id and password</span>
+    <span class="nb">id</span>  <span class="o">=</span> <span class="n">json_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+    <span class="n">pwd</span> <span class="o">=</span> <span class="n">json_obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">pwd</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-            <span class="k">return</span> <span class="s">&quot;missing id or password&quot;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="nb">id</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">pwd</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;missing id or password&#39;</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * Query database and get JSON string</span>
-<span class="cm">         *</span>
-<span class="cm">         * &quot;8.8.8.8&quot;: Database server IP address (/etc/tanserver.conf)</span>
-<span class="cm">         * row_to_json(): pgSQL JSON function</span>
-<span class="cm">         */</span>
-        <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
-                                       <span class="s">&quot;select row_to_json(users) from users where id = $1 and password = $2;&quot;</span><span class="p">,</span>
-                                       <span class="n">id</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">pwd</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Query database and get JSON string.</span>
+        <span class="c1"># &quot;127.0.0.1&quot;: Database server IP address (/etc/tanserver.conf)</span>
+        <span class="c1"># row_to_json(): pgSQL JSON function</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;select row_to_json(users) from users where id = $1 and password = $2&#39;</span><span class="p">,</span>
+                       <span class="nb">id</span><span class="p">,</span> <span class="n">pwd</span><span class="p">)</span>
 
-        <span class="cm">/* If json_string is an empty string, it means there is no such user  */</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">json_string</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1"># If &#39;res&#39; is an empty string, it means there is no such user.</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="c1"># Complete registration.</span>
+            <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;insert into users values($1, $2, $3)&#39;</span><span class="p">,</span>
+                     <span class="nb">id</span><span class="p">,</span> <span class="n">pwd</span><span class="p">,</span> <span class="s1">&#39;16&#39;</span><span class="p">)</span>
 
-            <span class="cm">/* Complete registration  */</span>
-            <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;insert into users values($1, $2, $3)&quot;</span><span class="p">,</span>
-                     <span class="n">id</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="n">pwd</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="s">&quot;16&quot;</span><span class="p">);</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;msg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;registration successful&#39;</span>
 
-            <span class="n">Json</span><span class="o">::</span><span class="n">Value</span>  <span class="n">json</span><span class="p">;</span>
+            <span class="c1"># Send {&quot;msg&quot;: &quot;registration successful&quot;}</span>
+            <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-            <span class="n">json</span><span class="p">[</span><span class="s">&quot;msg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;registration successful&quot;</span><span class="p">;</span>
-
-            <span class="cm">/* Send {&quot;msg&quot;: &quot;registration successful&quot;}  */</span>
-            <span class="k">return</span> <span class="n">json_encode</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="cm">/* Send JSON string, like: {&quot;id&quot;: 0, &quot;password&quot;: &quot;mypwd&quot;, &quot;age&quot;: 21}  */</span>
-        <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
-
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
-        <span class="cm">/*</span>
-<span class="cm">         * Database query failed, the reason will be</span>
-<span class="cm">         * automatically written to the log file</span>
-<span class="cm">         *</span>
-<span class="cm">         * You can choose to throw an exception (disconnect from the client)</span>
-<span class="cm">         * or send an error JSON string</span>
-<span class="cm">         *</span>
-<span class="cm">         * Here we choose to disconnect (it will cause an IOException to be</span>
-<span class="cm">         * thrown when the Java client calls getJSON())</span>
-<span class="cm">         */</span>
-        <span class="k">throw</span> <span class="s">&quot;error&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+        <span class="c1"># Send JSON string, like: {&quot;id&quot;: 0, &quot;password&quot;: &quot;mypwd&quot;, &quot;age&quot;: 21}</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># Database query failed, the reason will be automatically written to the log file.</span>
+        <span class="k">return</span> <span class="s1">&#39;Query failed&#39;</span>
 </code></pre></div>
 </td></tr></table>
 <p><img alt="login_register" src="../../common/gif/login_register.gif" /></p>
@@ -1136,81 +1054,51 @@
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
-<span class="nf">get_items</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-        <span class="n">string</span>  <span class="n">json_string</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
-                                       <span class="s">&quot;select array_to_json(array_agg(row_to_json(items))) from items;&quot;</span><span class="p">,</span>
-                                       <span class="nb">NULL</span><span class="p">);</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_items</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;select array_to_json(array_agg(row_to_json(items))) from items&#39;</span><span class="p">)</span>
+        <span class="c1"># Send</span>
+        <span class="c1"># {</span>
+        <span class="c1">#     &quot;status&quot;:0,</span>
+        <span class="c1">#     &quot;message&quot;:&quot;OK&quot;,</span>
+        <span class="c1">#     &quot;result&quot;:[</span>
+        <span class="c1">#         {</span>
+        <span class="c1">#             &quot;id&quot;:0,</span>
+        <span class="c1">#             &quot;name&quot;:&quot;book&quot;,</span>
+        <span class="c1">#             &quot;price&quot;:5</span>
+        <span class="c1">#         },</span>
+        <span class="c1">#         {</span>
+        <span class="c1">#             &quot;id&quot;:1,</span>
+        <span class="c1">#             &quot;name&quot;:&quot;keyboard&quot;,</span>
+        <span class="c1">#             &quot;price&quot;:200</span>
+        <span class="c1">#         }</span>
+        <span class="c1">#     ]</span>
+        <span class="c1"># }</span>
+        <span class="k">return</span> <span class="n">json_append_status</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;OK&#39;</span><span class="p">)</span>
 
-        <span class="n">json_append_status</span><span class="p">(</span><span class="n">json_string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;OK&quot;</span><span class="p">);</span>
+        <span class="c1"># Exclude price, send</span>
+        <span class="c1"># {</span>
+        <span class="c1">#     &quot;status&quot;:200,</span>
+        <span class="c1">#     &quot;message&quot;:&quot;OK&quot;,</span>
+        <span class="c1">#     &quot;result&quot;:[</span>
+        <span class="c1">#         {</span>
+        <span class="c1">#             &quot;id&quot;:0,</span>
+        <span class="c1">#             &quot;name&quot;:&quot;book&quot;,</span>
+        <span class="c1">#         },</span>
+        <span class="c1">#         {</span>
+        <span class="c1">#             &quot;id&quot;:1,</span>
+        <span class="c1">#             &quot;name&quot;:&quot;keyboard&quot;,</span>
+        <span class="c1">#         }</span>
+        <span class="c1">#     ]</span>
+        <span class="c1"># }</span>
 
-        <span class="cm">/* Send</span>
-<span class="cm">         * {</span>
-<span class="cm">         *      &quot;status&quot;:0,</span>
-<span class="cm">         *      &quot;message&quot;:&quot;OK&quot;,</span>
-<span class="cm">         *      &quot;result&quot;:[</span>
-<span class="cm">         *          {</span>
-<span class="cm">         *              &quot;id&quot;:0,</span>
-<span class="cm">         *              &quot;name&quot;:&quot;book&quot;,</span>
-<span class="cm">         *              &quot;price&quot;:5</span>
-<span class="cm">         *          },</span>
-<span class="cm">         *          {</span>
-<span class="cm">         *              &quot;id&quot;:1,</span>
-<span class="cm">         *              &quot;name&quot;:&quot;keyboard&quot;,</span>
-<span class="cm">         *              &quot;price&quot;:200</span>
-<span class="cm">         *          }</span>
-<span class="cm">         *      ]</span>
-<span class="cm">         * }</span>
-<span class="cm">         */</span>
-        <span class="k">return</span> <span class="n">json_string</span><span class="p">;</span>
+        <span class="c1"># res = pg_query(&#39;127.0.0.1&#39;,</span>
+        <span class="c1">#                &#39;select array_to_json(array_agg(json_build_object(&#39;id&#39;, id, &#39;name&#39;, name))) from items&#39;)</span>
 
-        <span class="cm">/*</span>
-<span class="cm">         * Exclude price</span>
-<span class="cm">         *</span>
-<span class="cm">         * string  json_string = pg_query(&quot;8.8.8.8&quot;,</span>
-<span class="cm">         *                                &quot;select array_to_json(array_agg(json_build_object(&#39;id&#39;, id, &#39;name&#39;, name))) from items;&quot;,</span>
-<span class="cm">         *                                NULL);</span>
-<span class="cm">         *</span>
-<span class="cm">         * json_append_status(json_string, 200, &quot;ok&quot;);</span>
-<span class="cm">         *</span>
-<span class="cm">         * Send</span>
-<span class="cm">         * {</span>
-<span class="cm">         *      &quot;status&quot;:200,</span>
-<span class="cm">         *      &quot;message&quot;:&quot;ok&quot;,</span>
-<span class="cm">         *      &quot;result&quot;:[</span>
-<span class="cm">         *          {</span>
-<span class="cm">         *              &quot;id&quot;:0,</span>
-<span class="cm">         *              &quot;name&quot;:&quot;book&quot;</span>
-<span class="cm">         *          },</span>
-<span class="cm">         *          {</span>
-<span class="cm">         *              &quot;id&quot;:1,</span>
-<span class="cm">         *              &quot;name&quot;:&quot;keyboard&quot;</span>
-<span class="cm">         *          }</span>
-<span class="cm">         *      ]</span>
-<span class="cm">         * }</span>
-<span class="cm">         * return json_string;</span>
-<span class="cm">         */</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="s">&quot;error&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+        <span class="c1"># return json_append_status(res, 200, &#39;OK&#39;)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Query failed&#39;</span>
 </code></pre></div>
 </td></tr></table>
 <p><img alt="get_items" src="../../common/gif/get_items.gif" /></p>
@@ -1234,39 +1122,25 @@
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">string</span>
-<span class="nf">transaction</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">try</span> <span class="p">{</span>
-        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;begin;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">transaction</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;begin&#39;</span><span class="p">)</span>
 
-        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
-                 <span class="s">&quot;update accounts set num = num - $1 where name = $2;&quot;</span><span class="p">,</span>
-                 <span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">);</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;update accounts set num = num - $1 where name = $2&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack&#39;</span><span class="p">)</span>
 
-        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span>
-                 <span class="s">&quot;update accounts set num = num + $1 &quot;</span>
-                 <span class="s">&quot;where name = $2;&quot;</span><span class="p">,</span> <span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;Mike&quot;</span><span class="p">);</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;update accounts set num = num + $1 where name = $2&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Mike&#39;</span><span class="p">)</span>
 
-        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;commit;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;commit&#39;</span><span class="p">)</span>
 
-        <span class="cm">/* Send &quot;ok&quot;  */</span>
-        <span class="k">return</span> <span class="s">&quot;ok&quot;</span><span class="p">;</span>
-
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(...)</span> <span class="p">{</span>
-
-        <span class="cm">/* Rollback and send &quot;failed&quot;  */</span>
-        <span class="n">pg_query</span><span class="p">(</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p">,</span> <span class="s">&quot;rollback;&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-        <span class="k">return</span> <span class="s">&quot;failed&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+        <span class="c1"># Send &quot;OK&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;OK&#39;</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">pg_query</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;rollback&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;Query failed&#39;</span>
 </code></pre></div>
 </td></tr></table>
                 
@@ -1304,13 +1178,13 @@
       
       
         
-        <a href="../apis/" class="md-footer__link md-footer__link--next" aria-label="Next: APIs" rel="next">
+        <a href="../python_apis/" class="md-footer__link md-footer__link--next" aria-label="Next: Python APIs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              APIs
+              Python APIs
             </div>
           </div>
           <div class="md-footer__button md-icon">

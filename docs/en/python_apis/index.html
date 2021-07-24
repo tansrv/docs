@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://tanserver.org/en/hot_reload/">
+        <link rel="canonical" href="https://tanserver.org/en/python_apis/">
       
       <link rel="icon" href="../../assets/images/tanserver.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Hot reload - Tanserver</title>
+        <title>Python APIs - Tanserver</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command" class="md-skip">
+        <a href="#import-tanserver-module" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hot reload
+              Python APIs
             
           </span>
         </div>
@@ -217,15 +217,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../install/" class="md-tabs__link md-tabs__link--active">
+      <a href="../install/" class="md-tabs__link">
         Quick start
       </a>
     </li>
@@ -247,11 +245,13 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../apis/" class="md-tabs__link">
-      APIs
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Python APIs
     </a>
   </li>
 
@@ -266,7 +266,7 @@
   
     <li class="md-tabs__item">
       <a href="../java/" class="md-tabs__link">
-        Connectors
+        Client connectors
       </a>
     </li>
   
@@ -377,14 +377,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Quick start
@@ -484,61 +482,6 @@
             
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Hot reload
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Hot reload
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
-    Command
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo" class="md-nav__link">
-    Demo
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
   
     <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
@@ -575,11 +518,61 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../apis/" class="md-nav__link">
-        APIs
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python APIs
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-tanserver-module" class="md-nav__link">
+    Import tanserver module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -598,13 +591,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -627,6 +620,18 @@
     <li class="md-nav__item">
       <a href="../swift/" class="md-nav__link">
         Swift
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        JavaScript
       </a>
     </li>
   
@@ -746,15 +751,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
-    Command
+  <a href="#import-tanserver-module" class="md-nav__link">
+    Import tanserver module
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#demo" class="md-nav__link">
-    Demo
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
   </a>
   
 </li>
@@ -771,19 +783,98 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tansrv/tanserver/edit/master/docs/en/hot_reload.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/tansrv/tanserver/edit/master/docs/en/python_apis.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Hot reload</h1>
+                  <h1>Python APIs</h1>
                 
-                <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>sudo /etc/init.d/tanserver reload
+                <h2 id="import-tanserver-module">Import <code>tanserver</code> module<a class="headerlink" href="#import-tanserver-module" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tanserver</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
-<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h2>
-<p><img alt="hot_reload_server" src="../../common/gif/hot_reload_server.gif" />
-<img alt="hot_reload" src="../../common/gif/hot_reload.gif" /></p>
+<h2 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Declaration</th>
+<th align="left">pg_query(hostaddr, query, *args)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Description</td>
+<td align="left">Query database and get the first field of the first row.</td>
+</tr>
+<tr>
+<td align="left">Param <code>hostaddr</code></td>
+<td align="left">Database server IP address. Edit in <code>/etc/tanserver.conf</code>.</td>
+</tr>
+<tr>
+<td align="left">Param <code>query</code></td>
+<td align="left">SQL statement, use <code>$1</code>, <code>$2</code>, <code>$3</code>... to replace variable arguments.</td>
+</tr>
+<tr>
+<td align="left">Param <code>*args</code></td>
+<td align="left">Variable arguments, only supports string.</td>
+</tr>
+<tr>
+<td align="left">Exception</td>
+<td align="left">When an error occurs, the reason will be automatically written to the log file.</td>
+</tr>
+<tr>
+<td align="left">Return</td>
+<td align="left">The first field of the first row or an empty string.</td>
+</tr>
+<tr>
+<td align="left">Availability</td>
+<td align="left">2.0.0+</td>
+</tr>
+<tr>
+<td align="left">Examples</td>
+<td align="left"><a href="../examples/#api-login_register">login_register</a>&emsp;<a href="../examples/#api-get_items">get_items</a>&emsp;<a href="../examples/#api-transaction">transaction</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Declaration</th>
+<th align="left">json_append_status(json_string, status_code, message)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Description</td>
+<td align="left">Append status code and message to a JSON string.</td>
+</tr>
+<tr>
+<td align="left">Param <code>json_string</code></td>
+<td align="left">The JSON string to be processed.</td>
+</tr>
+<tr>
+<td align="left">Param <code>status_code</code></td>
+<td align="left">The specified status code.</td>
+</tr>
+<tr>
+<td align="left">Param <code>message</code></td>
+<td align="left">The specified message.</td>
+</tr>
+<tr>
+<td align="left">Return</td>
+<td align="left">For example: {"status":200,"message":"OK","result":{$json_string}}</td>
+</tr>
+<tr>
+<td align="left">Availability</td>
+<td align="left">2.0.0+</td>
+</tr>
+<tr>
+<td align="left">Example</td>
+<td align="left"><a href="../examples/#api-append_status">append_status</a></td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -803,7 +894,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API examples" rel="prev">
+        <a href="../examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -812,20 +903,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              API examples
+              Examples
             </div>
           </div>
         </a>
       
       
         
-        <a href="../commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Commands" rel="next">
+        <a href="../java/" class="md-footer__link md-footer__link--next" aria-label="Next: Java" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Commands
+              Java
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -248,8 +248,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../apis/" class="md-tabs__link">
-      APIs
+    <a href="../python_apis/" class="md-tabs__link">
+      Python APIs
     </a>
   </li>
 
@@ -266,7 +266,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Connectors
+        Client connectors
       </a>
     </li>
   
@@ -484,18 +484,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../hot_reload/" class="md-nav__link">
-        Hot reload
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         Commands
       </a>
@@ -532,8 +520,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/" class="md-nav__link">
-        APIs
+      <a href="../python_apis/" class="md-nav__link">
+        Python APIs
       </a>
     </li>
   
@@ -555,13 +543,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -655,6 +643,18 @@
     <li class="md-nav__item">
       <a href="../swift/" class="md-nav__link">
         Swift
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        JavaScript
       </a>
     </li>
   
@@ -835,10 +835,10 @@
                   <h1>Java</h1>
                 
                 <h2 id="get-connector">Get connector<a class="headerlink" href="#get-connector" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/tansrv/tanserver-connector-java.git
+<div class="highlight"><pre><span></span><code>git clone https://github.com/tansrv/tanserver-connectors.git
 </code></pre></div>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
-<p>Copy <code>tan</code> directory to your Java project.</p>
+<p>Copy <code>java/tan</code> directory to your project and import it.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -946,7 +946,7 @@
 <p><code>jsonString</code> is an invalid JSON string.</p>
 </li>
 <li>
-<p><code>jsonString</code> is too large and exceeds <code>client_max_json_size</code>.</p>
+<p><code>jsonString</code> is too large and exceeds <code>client_max_body_size</code>.</p>
 </li>
 </ol>
                 
@@ -968,7 +968,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../apis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: APIs" rel="prev">
+        <a href="../python_apis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python APIs" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -977,7 +977,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              APIs
+              Python APIs
             </div>
           </div>
         </a>

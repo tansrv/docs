@@ -250,8 +250,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../apis/" class="md-tabs__link">
-      APIs
+    <a href="../python_apis/" class="md-tabs__link">
+      Python APIs
     </a>
   </li>
 
@@ -266,7 +266,7 @@
   
     <li class="md-tabs__item">
       <a href="../java/" class="md-tabs__link">
-        Connectors
+        Client connectors
       </a>
     </li>
   
@@ -498,8 +498,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-cpp-source-file" class="md-nav__link">
-    Create cpp source file
+  <a href="#create-a-py-file" class="md-nav__link">
+    Create a .py file
   </a>
   
 </li>
@@ -526,18 +526,6 @@
     <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         API examples
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hot_reload/" class="md-nav__link">
-        Hot reload
       </a>
     </li>
   
@@ -584,8 +572,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/" class="md-nav__link">
-        APIs
+      <a href="../python_apis/" class="md-nav__link">
+        Python APIs
       </a>
     </li>
   
@@ -605,13 +593,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -634,6 +622,18 @@
     <li class="md-nav__item">
       <a href="../swift/" class="md-nav__link">
         Swift
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        JavaScript
       </a>
     </li>
   
@@ -760,8 +760,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-cpp-source-file" class="md-nav__link">
-    Create cpp source file
+  <a href="#create-a-py-file" class="md-nav__link">
+    Create a .py file
   </a>
   
 </li>
@@ -794,36 +794,20 @@
                 
                 <h2 id="first-api">First API<a class="headerlink" href="#first-api" title="Permanent link">&para;</a></h2>
 <p>Send <code>hello, world</code> to the client.</p>
-<h2 id="create-cpp-source-file">Create cpp source file<a class="headerlink" href="#create-cpp-source-file" title="Permanent link">&para;</a></h2>
-<p>Create <code>hello.cpp</code> source file in <code>user_api</code> directory.</p>
+<h2 id="create-a-py-file">Create a <code>.py</code> file<a class="headerlink" href="#create-a-py-file" title="Permanent link">&para;</a></h2>
+<p>Create <code>hello.py</code> in <code>/usr/local/tanserver/user_api/</code> directory.</p>
 <h2 id="api-hello_world">API: hello_world<a class="headerlink" href="#api-hello_world" title="Permanent link">&para;</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/* hello.cpp  */</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># hello.py</span>
 
-<span class="cp">#include</span> <span class="cpf">&lt;tanserver/user.h&gt;</span><span class="cp"></span>
+<span class="kn">from</span> <span class="nn">tanserver</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
-
-<span class="n">string</span>
-<span class="nf">hello_world</span><span class="p">(</span><span class="k">const</span> <span class="n">Json</span><span class="o">::</span><span class="n">Value</span> <span class="o">&amp;</span><span class="n">value_recvd</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="cm">/* Send &quot;hello, world&quot;  */</span>
-    <span class="k">return</span> <span class="s">&quot;hello, world&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">}</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">json_obj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;hello, world&#39;</span>
 </code></pre></div>
 </td></tr></table>
 <div class="admonition note">

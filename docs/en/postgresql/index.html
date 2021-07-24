@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#edit-configuration-file" class="md-skip">
+        <a href="#install-postgresql" class="md-skip">
           Skip to content
         </a>
       
@@ -250,8 +250,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../apis/" class="md-tabs__link">
-      APIs
+    <a href="../python_apis/" class="md-tabs__link">
+      Python APIs
     </a>
   </li>
 
@@ -266,7 +266,7 @@
   
     <li class="md-tabs__item">
       <a href="../java/" class="md-tabs__link">
-        Connectors
+        Client connectors
       </a>
     </li>
   
@@ -455,6 +455,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#install-postgresql" class="md-nav__link">
+    Install PostgreSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#edit-configuration-file" class="md-nav__link">
     Edit configuration file
   </a>
@@ -522,18 +529,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../hot_reload/" class="md-nav__link">
-        Hot reload
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         Commands
       </a>
@@ -570,8 +565,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/" class="md-nav__link">
-        APIs
+      <a href="../python_apis/" class="md-nav__link">
+        Python APIs
       </a>
     </li>
   
@@ -591,13 +586,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -620,6 +615,18 @@
     <li class="md-nav__item">
       <a href="../swift/" class="md-nav__link">
         Swift
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        JavaScript
       </a>
     </li>
   
@@ -739,6 +746,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#install-postgresql" class="md-nav__link">
+    Install PostgreSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#edit-configuration-file" class="md-nav__link">
     Edit configuration file
   </a>
@@ -764,7 +778,10 @@
                 
                   <h1>Connect to PostgreSQL</h1>
                 
-                <h2 id="edit-configuration-file">Edit configuration file<a class="headerlink" href="#edit-configuration-file" title="Permanent link">&para;</a></h2>
+                <h2 id="install-postgresql">Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Permanent link">&para;</a></h2>
+<p>Tanserver currently only supports <a href="https://www.postgresql.org/download/">PostgreSQL</a>.</p>
+<p>You can connect to <code>127.0.0.1:5432</code> after installing PostgreSQL locally.</p>
+<h2 id="edit-configuration-file">Edit configuration file<a class="headerlink" href="#edit-configuration-file" title="Permanent link">&para;</a></h2>
 <p>Edit <code>/etc/tanserver.conf</code></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -789,7 +806,7 @@
 }
 </code></pre></div>
 </td></tr></table>
-<p>Delete <code>#</code> and change to your pgSQL information.</p>
+<p>Delete <code>#</code> and change to your PostgreSQL information.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your pgSQL version should &gt;= <code>9.2</code>.</p>

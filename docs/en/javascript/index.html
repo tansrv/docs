@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://tanserver.org/en/apis/">
+        <link rel="canonical" href="https://tanserver.org/en/javascript/">
       
       <link rel="icon" href="../../assets/images/tanserver.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>APIs - Tanserver</title>
+        <title>JavaScript - Tanserver</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#database" class="md-skip">
+        <a href="#get-connector" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              APIs
+              JavaScript
             
           </span>
         </div>
@@ -245,13 +245,11 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      APIs
+    <a href="../python_apis/" class="md-tabs__link">
+      Python APIs
     </a>
   </li>
 
@@ -259,14 +257,16 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../java/" class="md-tabs__link">
-        Connectors
+      <a href="../java/" class="md-tabs__link md-tabs__link--active">
+        Client connectors
       </a>
     </li>
   
@@ -484,18 +484,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../hot_reload/" class="md-nav__link">
-        Hot reload
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         Commands
       </a>
@@ -530,54 +518,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          APIs
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        APIs
+    <li class="md-nav__item">
+      <a href="../python_apis/" class="md-nav__link">
+        Python APIs
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    JSON
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -588,21 +533,23 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
-        Connectors
+        Client connectors
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Connectors" data-md-level="1">
+      <nav class="md-nav" aria-label="Client connectors" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Connectors
+          Client connectors
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -626,6 +573,101 @@
       <a href="../swift/" class="md-nav__link">
         Swift
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        JavaScript
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-connector" class="md-nav__link">
+    Get connector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getjson" class="md-nav__link">
+    getJSON()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-causes-of-errors" class="md-nav__link">
+    Common causes of errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -744,16 +786,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
+  <a href="#get-connector" class="md-nav__link">
+    Get connector
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    JSON
+  <a href="#install" class="md-nav__link">
+    Install
   </a>
+  
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getjson" class="md-nav__link">
+    getJSON()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-causes-of-errors" class="md-nav__link">
+    Common causes of errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -769,139 +851,118 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tansrv/tanserver/edit/master/docs/en/apis.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/tansrv/tanserver/edit/master/docs/en/javascript.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>APIs</h1>
+                  <h1>JavaScript</h1>
                 
-                <h2 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
+                <h2 id="get-connector">Get connector<a class="headerlink" href="#get-connector" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/tansrv/tanserver-connectors.git
+</code></pre></div>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>Copy <code>javascript/Tanserver.js</code> into your project and include it.</p>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Browser</th>
+<th align="left">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Chrome</td>
+<td align="left">5+</td>
+</tr>
+<tr>
+<td align="left">Edge</td>
+<td align="left">12+</td>
+</tr>
+<tr>
+<td align="left">Firefox</td>
+<td align="left">11+</td>
+</tr>
+<tr>
+<td align="left">Safari</td>
+<td align="left">5.1+</td>
+</tr>
+<tr>
+<td align="left">Chrome Android</td>
+<td align="left">18+</td>
+</tr>
+<tr>
+<td align="left">Firefox Android</td>
+<td align="left">14+</td>
+</tr>
+<tr>
+<td align="left">Safari iOS</td>
+<td align="left">6+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;./Tanserver.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span><span class="o">&gt;</span>
+    <span class="cm">/* Initialize connection information.  */</span>
+    <span class="nx">tan</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tanserver</span><span class="p">(</span><span class="s2">&quot;tanserver.org&quot;</span><span class="p">,</span> <span class="mf">2579</span><span class="p">);</span>
+
+    <span class="cm">/* Get JSON string from the server.  */</span>
+    <span class="nx">tan</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">&#39;API&#39;</span><span class="p">,</span> <span class="s1">&#39;{}&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>  <span class="cm">/* An error has occurred, notify the user of network failure.  */</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/* Got a JSON string, parse it here.  */</span>
+        <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
+        <span class="p">...</span>
+    <span class="p">});</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+<h3 id="getjson">getJSON()<a class="headerlink" href="#getjson" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th align="left">Declaration</th>
-<th align="left"><code>string</code> pg_query(const char *hostaddr, const char *query, ...)</th>
+<th align="left"><code>void</code> getJSON(userApi, jsonString, completion(jsonData, err))</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Description</td>
-<td align="left">Query database and get the first field of the first row.</td>
+<td align="left">Get JSON answer from the server.</td>
 </tr>
 <tr>
-<td align="left">Param <code>hostaddr</code></td>
-<td align="left">Database server IP address: <code>/etc/tanserver.conf</code>.</td>
+<td align="left">Param <code>userApi</code></td>
+<td align="left">API provided by the server.</td>
 </tr>
 <tr>
-<td align="left">Param <code>query</code></td>
-<td align="left">SQL statement, use <code>$1</code>, <code>$2</code>, <code>$3</code>... to replace variable arguments.</td>
+<td align="left">Param <code>jsonString</code></td>
+<td align="left">The JSON string that will be sent to the server.</td>
 </tr>
 <tr>
-<td align="left">Param <code>...</code></td>
-<td align="left">Variable arguments, only supports C-style strings.</td>
-</tr>
-<tr>
-<td align="left">Exception</td>
-<td align="left">When an error occurs, the reason will be automatically written to the log file.</td>
-</tr>
-<tr>
-<td align="left">Return</td>
-<td align="left">The first field of the first row or an empty string.</td>
-</tr>
-<tr>
-<td align="left">Availability</td>
-<td align="left">1.0.0+</td>
-</tr>
-<tr>
-<td align="left">Examples</td>
-<td align="left"><a href="../examples/#api-login_register">login_register</a>&emsp;<a href="../examples/#api-get_items">get_items</a>&emsp;<a href="../examples/#api-transaction">transaction</a></td>
+<td align="left">Param <code>completion(jsonData, err)</code></td>
+<td align="left">jsonData will contain JSON answer from tanserver, if an error occurs, <code>err</code> will not be null.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">Declaration</th>
-<th align="left"><code>string</code> json_encode(const Json::Value &amp;value)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Description</td>
-<td align="left">Based on <a href="https://github.com/open-source-parsers/jsoncpp">JsonCpp</a>, convert <code>Json::Value</code> object into a JSON string.</td>
-</tr>
-<tr>
-<td align="left">Availability</td>
-<td align="left">1.0.0+</td>
-</tr>
-<tr>
-<td align="left">Example</td>
-<td align="left"><a href="../examples/#api-hello_tanserver">hello_tanserver</a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="left">Declaration</th>
-<th align="left"><code>Json::Value</code> json_decode(const std::string &amp;json_string)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Description</td>
-<td align="left">Convert JSON string to <code>Json::Value</code> object.</td>
-</tr>
-<tr>
-<td align="left">Exception</td>
-<td align="left">Throw an exception when <code>json_string</code> is an invalid JSON string.</td>
-</tr>
-<tr>
-<td align="left">Availability</td>
-<td align="left">1.0.0+</td>
-</tr>
-<tr>
-<td align="left">Example</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="left">Declaration</th>
-<th align="left"><code>void</code> json_append_status(string &amp;json_string, int stat, const char *msg)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Description</td>
-<td align="left">Append status code and message to JSON string.</td>
-</tr>
-<tr>
-<td align="left">Param <code>json_string</code></td>
-<td align="left">JSON string</td>
-</tr>
-<tr>
-<td align="left">Param <code>stat</code></td>
-<td align="left">Status code</td>
-</tr>
-<tr>
-<td align="left">Param <code>msg</code></td>
-<td align="left">Message</td>
-</tr>
-<tr>
-<td align="left">Availability</td>
-<td align="left">1.0.0+</td>
-</tr>
-<tr>
-<td align="left">Example</td>
-<td align="left"><a href="../examples/#api-append_status">append_status</a></td>
-</tr>
-</tbody>
-</table>
+<h3 id="common-causes-of-errors">Common causes of errors<a class="headerlink" href="#common-causes-of-errors" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>The client is offline or the server is not started.</p>
+</li>
+<li>
+<p>SSL handshake failed.</p>
+</li>
+<li>
+<p>API does not exist.</p>
+</li>
+<li>
+<p><code>jsonString</code> is an invalid JSON string.</p>
+</li>
+</ol>
                 
               
               
@@ -921,7 +982,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples" rel="prev">
+        <a href="../swift/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Swift" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -930,20 +991,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Examples
+              Swift
             </div>
           </div>
         </a>
       
       
         
-        <a href="../java/" class="md-footer__link md-footer__link--next" aria-label="Next: Java" rel="next">
+        <a href="../install_shipper/" class="md-footer__link md-footer__link--next" aria-label="Next: Install" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Java
+              Install
             </div>
           </div>
           <div class="md-footer__button md-icon">
