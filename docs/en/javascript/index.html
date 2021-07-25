@@ -277,6 +277,18 @@
   
 
 
+  <li class="md-tabs__item">
+    <a href="../api-tester.html" class="md-tabs__link">
+      API tester
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
   
   
   
@@ -685,18 +697,33 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api-tester.html" class="md-nav__link">
+        API tester
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_6">
+      <label class="md-nav__link" for="__nav_7">
         Log shipping
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Log shipping" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Log shipping
         </label>
@@ -862,7 +889,7 @@
 <div class="highlight"><pre><span></span><code>git clone https://github.com/tansrv/tanserver-connectors.git
 </code></pre></div>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
-<p>Copy <code>javascript/Tanserver.js</code> into your project and include it.</p>
+<p>Copy <code>javascript/tanserver.js</code> into your project and include it.</p>
 <h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -903,10 +930,10 @@
 </tbody>
 </table>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;./Tanserver.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;./tanserver.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span><span class="o">&gt;</span>
     <span class="cm">/* Initialize connection information.  */</span>
-    <span class="nx">tan</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tanserver</span><span class="p">(</span><span class="s2">&quot;tanserver.org&quot;</span><span class="p">,</span> <span class="mf">2579</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">tan</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tanserver</span><span class="p">(</span><span class="s2">&quot;tanserver.org&quot;</span><span class="p">,</span> <span class="mf">2579</span><span class="p">);</span>
 
     <span class="cm">/* Get JSON string from the server.  */</span>
     <span class="nx">tan</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">&#39;API&#39;</span><span class="p">,</span> <span class="s1">&#39;{}&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
@@ -926,7 +953,7 @@
 <thead>
 <tr>
 <th align="left">Declaration</th>
-<th align="left"><code>void</code> getJSON(userApi, jsonString, completion(jsonData, err))</th>
+<th align="left">getJSON(userApi: string, jsonString: string, completion(jsonData, err): function)</th>
 </tr>
 </thead>
 <tbody>
@@ -998,13 +1025,13 @@
       
       
         
-        <a href="../install_shipper/" class="md-footer__link md-footer__link--next" aria-label="Next: Install" rel="next">
+        <a href="../api-tester.html" class="md-footer__link md-footer__link--next" aria-label="Next: API tester" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Install
+              API tester
             </div>
           </div>
           <div class="md-footer__button md-icon">
