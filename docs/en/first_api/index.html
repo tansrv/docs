@@ -523,6 +523,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#access-the-api" class="md-nav__link">
+    Access the API
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -800,6 +807,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#access-the-api" class="md-nav__link">
+    Access the API
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -841,7 +855,50 @@
 <p class="admonition-title">Note</p>
 <p>Run <code>sudo /etc/init.d/tanserver reload</code> to reload APIs.</p>
 </div>
-<p>When the client calls <code>getJSON("hello_world", "{}")</code>:</p>
+<h2 id="access-the-api">Access the API<a class="headerlink" href="#access-the-api" title="Permanent link">&para;</a></h2>
+<p>Since Tanserver uses a custom protocol, you need to access the API through a client connector.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Client connectors: <a href="../java/">Java</a> / <a href="../swift/">Swift</a> / <a href="../javascript/">JavaScript</a></p>
+</div>
+<p>Here is an example in Java:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tan.Tanserver</span><span class="p">;</span>
+<span class="n">Tanserver</span> <span class="n">tan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tanserver</span><span class="p">(</span><span class="s">&quot;tanserver.org&quot;</span><span class="p">,</span> <span class="mi">2579</span><span class="p">);</span>
+
+<span class="cm">/* Get string from the server.  */</span>
+<span class="n">tan</span><span class="p">.</span><span class="na">getJSON</span><span class="p">(</span><span class="s">&quot;hello_world&quot;</span><span class="p">,</span> <span class="s">&quot;{}&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">Tanserver</span><span class="p">.</span><span class="na">Callback</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">String</span> <span class="n">jsonString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* hello, world  */</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailure</span><span class="p">(</span><span class="n">IOException</span> <span class="n">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* An error has occurred, notify the user of network failure.  */</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ERROR! &quot;</span> <span class="o">+</span> <span class="n">err</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+</td></tr></table>
 <p><img alt="hello_world" src="../../common/gif/hello_world.gif" /></p>
                 
               
