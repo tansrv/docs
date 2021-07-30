@@ -1,0 +1,13 @@
+:root {
+  --md-primary-fg-color:        #ec4c2f;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #eb4f12;
+}
+
+.mdx-hero__image {
+  margin-top: 30px;
+}
+
+.md-content__button {
+  display: none;
+}

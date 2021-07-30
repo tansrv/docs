@@ -1,0 +1,132 @@
+########### site ###########
+
+site_name: Tanserver
+site_url: https://tanserver.org/
+
+############################
+
+
+########### theme ###########
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+
+  language: en
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  favicon: assets/images/tanserver.png
+
+  features:
+    - navigation.tabs
+
+  font:
+    text: Poppins
+    code: Roboto Mono
+
+############################
+
+
+########### repo ###########
+
+repo_name: tansrv/tanserver
+repo_url: https://github.com/tansrv/tanserver
+
+############################
+
+
+############ nav ###########
+
+nav:
+  - Home: index.md
+  - Quick start:
+    - Install: en/install.md
+    - Install SSL certificate: en/install_ssl.md
+    - Connect to PostgreSQL: en/postgresql.md
+    - Start server: en/start.md
+    - Set up an editor: en/editor.md
+    - Write your first API: en/first_api.md
+    - API examples: en/examples.md
+    - Commands: en/commands.md
+
+  - Examples: en/examples.md
+
+  - Python APIs: en/python_apis.md
+
+  - Client connectors:
+    - Java: en/java.md
+    - Swift: en/swift.md
+    - JavaScript: en/javascript.md
+
+  - API tester: en/api-tester/tester.md
+
+  - Log shipping:
+    - Install: en/install_shipper.md
+    - Start shipping: en/start_shipping.md
+
+  - Configuration: en/cfg.md
+
+  - Update: en/update.md
+
+############################
+
+
+######### markdown #########
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+############################
+
+
+############ css ###########
+
+extra_css:
+  - stylesheets/extra.css
+
+############################
+
+
+copyright: Copyright &copy; tanserver.org
