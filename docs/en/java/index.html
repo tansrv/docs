@@ -865,7 +865,7 @@
 <div class="highlight"><pre><span></span><code>git clone https://github.com/tansrv/tanserver-connectors.git
 </code></pre></div>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
-<p>Copy <code>java/tan</code> directory to your project and import it.</p>
+<p>Copy <code>java/tan</code> directory in your project and import it.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -950,11 +950,11 @@
 </tr>
 <tr>
 <td align="left">Param <code>callback</code></td>
-<td align="left">Need to implement <code>void onSuccess(String jsonString)</code> and <code>void onFailure(IOException err)</code>. When the request is successful, <code>onSuccess()</code> will be called, otherwise <code>onFailure()</code> will be called.</td>
+<td align="left">Needs to implement <code>void onSuccess(String jsonString)</code> and <code>void onFailure(IOException err)</code>. When the request is successful, <code>onSuccess()</code> will be called, otherwise <code>onFailure()</code> will be called.</td>
 </tr>
 <tr>
 <td align="left">Note</td>
-<td align="left">Android should add <code>&lt;uses-permission android:name="android.permission.INTERNET"/&gt;</code> in <code>AndroidManifest.xml</code>.</td>
+<td align="left">Android must add <code>&lt;uses-permission android:name="android.permission.INTERNET"/&gt;</code> in <code>AndroidManifest.xml</code>.</td>
 </tr>
 </tbody>
 </table>
