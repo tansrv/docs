@@ -8,11 +8,11 @@ from tanserver import *
 
 | Declaration         | pg_query(hostaddr, query, *args)
 | :------             | :------
-| Description         | Query database and get the first field of the first row.
+| Description         | Do a database query and get the first field of the first row.
 | Param `hostaddr`    | Database server IP address. Edit in `/etc/tanserver.conf`.
 | Param `query`       | SQL statement, use `$1`, `$2`, `$3`... to replace variable arguments.
 | Param `*args`       | Variable arguments, only supports string.
-| Exception           | When an error occurs, the reason will be automatically written to the log file.
+| Exception           | When an error occurs, the cause will be automatically written in the log file.
 | Return              | The first field of the first row or an empty string.
 | Availability        | 2.0.0+
 | Examples            | [login_register](../examples/#api-login_register)&emsp;[get_items](../examples/#api-get_items)&emsp;[transaction](../examples/#api-transaction)
@@ -21,7 +21,7 @@ from tanserver import *
 
 | Declaration         | json_append_status(json_string, status_code, message)
 | :------             | :------
-| Description         | Append status code and message to a JSON string.
+| Description         | Appends status code and message to a JSON string.
 | Param `json_string` | The JSON string to be processed.
 | Param `status_code` | The specified status code.
 | Param `message`     | The specified message.

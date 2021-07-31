@@ -6,7 +6,7 @@ git clone https://github.com/tansrv/tanserver-connectors.git
 
 ## Install
 
-Copy `java/tan` directory to your project and import it.
+Copy `java/tan` directory in your project and import it.
 
 ## Requirements
 
@@ -47,8 +47,8 @@ tan.getJSON("api", "{}", new Tanserver.Callback() {
 | Description        | Get JSON string from the server.
 | Param `userApi`    | API provided by the server.
 | Param `jsonString` | The JSON string that will be sent to the server.
-| Param `callback`   | Need to implement `void onSuccess(String jsonString)` and `void onFailure(IOException err)`. When the request is successful, `onSuccess()` will be called, otherwise `onFailure()` will be called.
-| Note               | Android should add `<uses-permission android:name="android.permission.INTERNET"/>` in `AndroidManifest.xml`.
+| Param `callback`   | Needs to implement `void onSuccess(String jsonString)` and `void onFailure(IOException err)`. When the request is successful, `onSuccess()` will be called, otherwise `onFailure()` will be called.
+| Note               | Android must add `<uses-permission android:name="android.permission.INTERNET"/>` in `AndroidManifest.xml`.
 
 ## Common reasons why `onFailure()` is called
 

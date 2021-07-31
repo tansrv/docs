@@ -20,7 +20,7 @@ cmake .. && make && make install
 ```
 
 !!! note
-    The above update will not overwrite the APIs you have written.
+    The above update will not overwrite the APIs you have already written.
 
 ## Check the version
 

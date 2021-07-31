@@ -3,7 +3,7 @@
 [ZeroSSL](https://help.zerossl.com/hc/en-us/articles/360060119373-Creating-an-SSL-Certificate) - Before requesting an SSL certificate, you should have a domain name.
 
 !!! note
-    The domain name used to request the SSL certificate should resolve to your server IP address.
+    The domain name used to request the SSL certificate should resolve in your server IP address.
 
 ## Download certificate
 

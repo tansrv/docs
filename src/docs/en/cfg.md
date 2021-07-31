@@ -39,11 +39,11 @@
 
 ### shipper
 
-| Option               | Description         | Default     | Availability |
-| :----                | :----               | :----       | :---- |
-| listen               | Listen port         | `1117`      | 1.0.0+ |
-| hostname             | Host name           | `tanserver` | 1.0.0+ |
-| allowlist            | Client IP addresses | None        | 1.0.0+ |
+| Option               | Description         | Default     | Availability
+| :----                | :----               | :----       | :----
+| listen               | Listen port         | `1117`      | 1.0.0+
+| hostname             | Host name           | `tanserver` | 1.0.0+
+| allowlist            | Client IP addresses | None        | 1.0.0+
 
 !!! note
-    The `hostname` of each server should be inconsistent.
+    The `hostname` of each server must be inconsistent.
