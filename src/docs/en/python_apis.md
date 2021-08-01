@@ -25,6 +25,6 @@ from tanserver import *
 | Param `json_string` | The JSON string to be processed.
 | Param `status_code` | The specified status code.
 | Param `message`     | The specified message.
-| Return              | For example: {"status":200,"message":"OK","result":{$json_string}}
+| Return              | For example: `{"status":200,"message":"OK","result":$json_string}`
 | Availability        | 2.0.0+
 | Example             | [append_status](../examples/#api-append_status)
