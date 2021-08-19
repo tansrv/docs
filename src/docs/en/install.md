@@ -16,7 +16,7 @@
     chmod +x apt-install.sh && sudo ./apt-install.sh
     ```
 
-=== "Arch"
+=== "Arch / Manjaro"
 
     ```shell linenums="1"
     git clone https://github.com/tansrv/tanserver.git
